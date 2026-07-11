@@ -101,9 +101,11 @@ namespace RW.Library.Mathematics.Polynomials
                 body = body.Substring(leadingCoeffMatch.Length);
             }
 
-            // Variables with optional integer exponents
+            // Variables with optional integer exponents. Each variable is a single
+            // letter, so "xy^2" is parsed as x * y^2 (standard algebraic convention),
+            // matching PolynomialParser. Explicit '*' separators are ignored.
             var variableDict = new Dictionary<string, int>(StringComparer.Ordinal);
-            foreach (Match m in Regex.Matches(body, @"([A-Za-z_]\w*)(?:\^(\d+))?"))
+            foreach (Match m in Regex.Matches(body, @"([A-Za-z])(?:\^(\d+))?"))
             {
                 string variableName = m.Groups[1].Value;
                 int exponent = m.Groups[2].Success ? int.Parse(m.Groups[2].Value) : 1;

@@ -69,10 +69,12 @@ namespace RW.Library.Mathematics.Tests.Polynomials
         [InlineData("  x  -  3x + 4 ", new[] { 1, -3, 4 })]
         public void Parse_Whitespace_And_Signs(string expr, int[] expectedCoeffs)
         {
-            var p = PolynomialParser.Parse(expr);
+            // Use the raw (pre-combination) parse: the third case ("x - 3x + 4")
+            // deliberately keeps both the +x and -3x terms. The combining Parse()
+            // would fold those into a single -2x term (covered by the semantic tests).
+            var terms = PolynomialParser.ParseTerms(expr);
 
-            // Just validate the expected number of terms and that all constants/variables show up
-            Assert.Equal(expectedCoeffs.Length, p.Terms.Count);
+            Assert.Equal(expectedCoeffs, terms.Select(t => t.Coefficient).ToArray());
         }
 
         [Theory]
