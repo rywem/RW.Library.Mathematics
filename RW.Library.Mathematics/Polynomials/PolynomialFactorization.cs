@@ -339,20 +339,20 @@ namespace RW.Library.Mathematics.Polynomials
         /// <summary>
         /// Parses a polynomial like "2xy^2 - 3y + 4 + x" (no outer parentheses required).
         /// Supports implicit multiplication inside monomials ("2ab^2c").
+        ///
+        /// <para>Delegates to <see cref="PolynomialParser"/> so the library has exactly one
+        /// parser. The previous regex-based implementation diverged from it: it silently
+        /// accepted malformed input such as "x^", "3**x" and "x +", and did not normalize
+        /// unicode minus signs — meaning the same text parsed differently depending on which
+        /// entry point the caller happened to use.</para>
         /// </summary>
+        /// <exception cref="FormatException">The input is not a well-formed polynomial.</exception>
         public static Polynomial Parse(string input)
         {
             if (string.IsNullOrWhiteSpace(input))
-                throw new ArgumentException("Empty polynomial string.", nameof(input));
+                throw new FormatException("Empty polynomial string.");
 
-            var chunks = Term.SplitIntoSignedTerms(input.Trim());
-            if (chunks.Count == 0) return new Polynomial(new Term(0));
-
-            var terms = new List<Term>();
-            foreach (var chunk in chunks)
-                terms.Add(Term.ParseSignedMonomial(chunk));
-
-            return new Polynomial(terms);
+            return PolynomialParser.Parse(input);
         }
 
         public HashSet<string> GetVariables()
