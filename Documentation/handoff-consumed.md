@@ -3,7 +3,7 @@
 The **exact polynomial engine**. Pre-dates the modular architecture; wrapped by the
 `polynomials` module.
 
-**Read [`Solutions/Mathematics/HANDOFF.md`](../../Solutions/Mathematics/HANDOFF.md) first.**
+**Read [`Solutions/Mathematics/handoff-consumed.md`](../../Solutions/Mathematics/handoff-consumed.md) first.**
 
 **Path:** `E:\Development\Projects\RW.Library.Mathematics`
 **Branch:** `feature/rw-math-workbench` (pushed to `github.com/rywem/RW.Library.Mathematics`)
