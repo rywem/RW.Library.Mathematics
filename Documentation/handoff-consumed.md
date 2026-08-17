@@ -25,7 +25,7 @@ exactness.
 | `PolynomialExpansion` | expand a factor tree back to a polynomial |
 | `PolynomialParser` | **the** parser (see §3) |
 
-Consumed by `RW.Mathematics.Modules.Polynomials`, which is a thin adapter. **Maths belongs
+Consumed by `RW.Modules.Mathematics.Polynomials`, which is a thin adapter. **Maths belongs
 here; presentation belongs in the module.**
 
 ## 2. History — why it looks like this
@@ -95,5 +95,5 @@ do not assume it is wired into anything.
 1. `dotnet test` in this repo, then the **whole solution** — the `polynomials` module, the
    RPC layer and the CLI all depend on this.
 2. Keep the exactness. If you find yourself reaching for `double`, you are in the wrong repo:
-   numeric work belongs in `RW.Mathematics.Modules.LinearAlgebra`.
+   numeric work belongs in `RW.Modules.Mathematics.LinearAlgebra`.
 3. Do not add a second parser.
