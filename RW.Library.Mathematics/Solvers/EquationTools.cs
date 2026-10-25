@@ -11,7 +11,7 @@ namespace RW.Library.Mathematics.Solvers
     /// <summary>
     /// Utility for equation preprocessing.
     /// </summary>
-    public static class EquationTools
+    internal static class EquationTools
     {
         /// <summary>
         /// Returns a single expression equivalent to Left - Right,

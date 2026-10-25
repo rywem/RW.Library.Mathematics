@@ -17,7 +17,7 @@ namespace RW.Library.Mathematics.Equations
     /// <summary>
     /// Represents Left = Right.
     /// </summary>
-    public class Equation
+    internal class Equation
     {
         public NodeExpression Left { get; }
         public NodeExpression Right { get; }

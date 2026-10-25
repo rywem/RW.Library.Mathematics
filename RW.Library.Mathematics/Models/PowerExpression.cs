@@ -7,7 +7,7 @@ namespace RW.Library.Mathematics.Models
     //
     // POWER
     //
-    public class PowerExpression : NodeExpression
+    internal class PowerExpression : NodeExpression
     {
         public NodeExpression BaseExpression { get; }
         public NodeExpression Exponent { get; }

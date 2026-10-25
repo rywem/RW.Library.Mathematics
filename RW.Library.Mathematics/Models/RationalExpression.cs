@@ -7,7 +7,7 @@ namespace RW.Library.Mathematics.Models
     /// <summary>
     /// Represents an exact rational number: Numerator / Denominator.
     /// </summary>
-    public sealed class RationalExpression : NodeExpression
+    internal sealed class RationalExpression : NodeExpression
     {
         public long Numerator { get; }
         public long Denominator { get; }

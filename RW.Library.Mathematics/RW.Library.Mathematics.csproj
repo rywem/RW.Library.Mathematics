@@ -7,7 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Parsers\" />
+    <InternalsVisibleTo Include="RW.Library.Mathematics.Tests" />
   </ItemGroup>
 
 </Project>

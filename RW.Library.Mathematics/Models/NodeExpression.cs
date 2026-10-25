@@ -11,7 +11,7 @@ namespace RW.Library.Mathematics.Models
     /// <summary>
     /// Base type for all symbolic algebra expressions.
     /// </summary>
-    public abstract class NodeExpression
+    internal abstract class NodeExpression
     {
         /// <summary>
         /// Returns a simplified form of the expression.

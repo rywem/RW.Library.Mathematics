@@ -13,7 +13,7 @@ namespace RW.Library.Mathematics.Models
     /// <summary>
     /// Represents a numeric literal (integer, real, etc.).
     /// </summary>
-    public class NumberExpression : NodeExpression
+    internal class NumberExpression : NodeExpression
     {
         public double Value { get; }
 

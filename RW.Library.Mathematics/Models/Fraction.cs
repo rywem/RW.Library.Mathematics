@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace RW.Library.Mathematics.Models
 {
-    public class Fraction
+    internal class Fraction
     {
         public int Numerator { get; set; }
         public int Denominator { get; set; }

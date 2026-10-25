@@ -13,7 +13,7 @@ namespace RW.Library.Mathematics.Models
     //
     // ADDITION
     //
-    public class AddExpression : NodeExpression
+    internal class AddExpression : NodeExpression
     {
         public NodeExpression Left { get; }
         public NodeExpression Right { get; }

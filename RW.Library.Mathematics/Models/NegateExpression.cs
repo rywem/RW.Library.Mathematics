@@ -13,7 +13,7 @@ namespace RW.Library.Mathematics.Models
     /// <summary>
     /// Represents unary negation: -expr.
     /// </summary>
-    public class NegateExpression : NodeExpression
+    internal class NegateExpression : NodeExpression
     {
         public NodeExpression Inner { get; }
 

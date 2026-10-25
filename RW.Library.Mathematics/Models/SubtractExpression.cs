@@ -7,7 +7,7 @@ namespace RW.Library.Mathematics.Models
     //
     // SUBTRACTION
     //
-    public class SubtractExpression : NodeExpression
+    internal class SubtractExpression : NodeExpression
     {
         public NodeExpression Left { get; }
         public NodeExpression Right { get; }

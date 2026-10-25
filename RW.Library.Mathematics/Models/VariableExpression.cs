@@ -13,7 +13,7 @@ namespace RW.Library.Mathematics.Models
     /// <summary>
     /// Represents a symbolic variable such as x, y.
     /// </summary>
-    public class VariableExpression : NodeExpression
+    internal class VariableExpression : NodeExpression
     {
         public string Name { get; }
 

@@ -7,7 +7,7 @@ namespace RW.Library.Mathematics.Models
     //
     // MULTIPLICATION
     //
-    public class MultiplyExpression : NodeExpression
+    internal class MultiplyExpression : NodeExpression
     {
         public NodeExpression Left { get; }
         public NodeExpression Right { get; }

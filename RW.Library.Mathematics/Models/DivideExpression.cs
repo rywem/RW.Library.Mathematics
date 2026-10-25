@@ -7,7 +7,7 @@ namespace RW.Library.Mathematics.Models
     //
     // DIVISION
     //
-    public class DivideExpression : NodeExpression
+    internal class DivideExpression : NodeExpression
     {
         public NodeExpression Left { get; }
         public NodeExpression Right { get; }
